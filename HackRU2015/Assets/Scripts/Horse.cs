@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Horse : MonoBehaviour {
 
-    void Start() {
-        
+    public Rigidbody rigidbody;
+
+    void Update() {
+        rigidbody.AddForce(rigidbody.transform.right * -10);
     }
 
 }

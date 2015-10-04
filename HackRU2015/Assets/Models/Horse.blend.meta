@@ -16,6 +16,7 @@ ModelImporter:
     100016: BackRight
     100018: FrontLeft
     100020: FrontRight
+    100022: WholeHorse
     400000: //RootNode
     400002: Armature_000
     400004: Bone
@@ -27,6 +28,7 @@ ModelImporter:
     400016: BackRight
     400018: FrontLeft
     400020: FrontRight
+    400022: WholeHorse
     2300000: //RootNode
     3300000: //RootNode
     4300000: Horse

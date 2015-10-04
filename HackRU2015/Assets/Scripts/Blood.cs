@@ -8,8 +8,8 @@ public class Blood : MonoBehaviour {
     }
 
     IEnumerator WaitAndDie() {
-        yield return new WaitForSeconds(2);
-        //Destroy(gameObject);
+        yield return new WaitForSeconds(30);
+        Destroy(gameObject);
     }
 
 }
