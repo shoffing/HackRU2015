@@ -30,6 +30,8 @@ public class HorseLimb : MonoBehaviour
     // which they are active.
     private Pose _lastPose = Pose.Unknown;
 
+    private Vector3 targetAngle;
+
     // Update is called once per frame.
     void Update ()
     {
