@@ -12,7 +12,7 @@ public class DancingHorse : MonoBehaviour {
     void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.tag == "Horse") {
             // Deal damage to ourselves
-            Damage(0.1f);
+            Damage(0.5f);
 
             foreach (ContactPoint contact in collision.contacts) {
                 // Create blood particle

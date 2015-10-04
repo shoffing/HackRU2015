@@ -6,7 +6,7 @@ public class Horse : MonoBehaviour {
     public Rigidbody rigidbody;
 
     void Update() {
-        rigidbody.AddForce(rigidbody.transform.right * -10);
+        rigidbody.AddForce(rigidbody.transform.right * -50);
     }
 
 }
