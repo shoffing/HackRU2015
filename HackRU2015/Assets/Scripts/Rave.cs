@@ -2,37 +2,30 @@ using UnityEngine;
 using System.Collections;
 
 public class Rave : MonoBehaviour {
-	public int bpm = 120;
-	public Color randColor;
-	public Light lt;
+
+	private const float RATE = 20f;
+
+	private Light lt;
+	private float offset;
+	private float oo1, oo2, oo3;
 
 	void Start() {
 		lt = GetComponent<Light>();
-		randColor = new Color(Random.Range(0F, 1F), Random.Range(0F, 1F), Random.Range(0F, 1F));
-		lt.color = randColor;
 
-		StartCoroutine(beginSequence());
+		offset = Random.value * Mathf.PI;
+		oo1 = Random.value * 100;
+		oo2 = Random.value * 100;
+		oo3 = Random.value * 100;
 	}
 
 	void Update() {
+		transform.parent.Rotate(new Vector3(0, 5, 0));
+
+		lt.color = new Color(
+			1f + 0.5f * Mathf.Sin(offset + Time.time * RATE + oo1),
+			1f + 0.5f * Mathf.Cos(offset + Time.time * RATE + oo2),
+			1f + 0.5f * Mathf.Sin(offset + Time.time * RATE + oo3)
+		);
 	}
 
-	IEnumerator beginSequence()
-	{
-		for (int i = 0; i < 100; i++) {
-			turnOffLights ();
-		
-			yield return 1;
-		
-			turnOnLights ();
-		}
-	}
-
-	void turnOffLights() {
-		lt.enabled = false;
-	}
-
-	void turnOnLights() {
-		lt.enabled = true;
-	}
 }

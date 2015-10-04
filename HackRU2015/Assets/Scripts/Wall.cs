@@ -7,7 +7,7 @@ public class Wall : MonoBehaviour {
         if(collision.gameObject.tag == "Horse") {
             foreach (ContactPoint contact in collision.contacts) {
                 // BOUNCY CASTLE
-                collision.rigidbody.AddForce(contact.normal * 300);
+                collision.rigidbody.AddForce(contact.normal * 150);
             }
         }
     }
